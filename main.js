@@ -19,11 +19,15 @@ function checkBank(e) {
                     </ul>
                 </div>
             `;
-            console.log(response.data);
             document.querySelector('#output').innerHTML = output;
         })
         .catch(function (error) {
+            var output = `
+                <div class="alert alert-danger">
+                    <p>Please enter correct IFSC code</p>
+                </div>`;
             console.log(error);
+            document.querySelector('#output').innerHTML = output;
         });
 
 
